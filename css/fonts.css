@@ -1,0 +1,33 @@
+.sigmar-one-regular {
+  font-family: "Sigmar One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sigmar-one-bold {
+  font-family: "Sigmar One", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.saira-bold {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+  font-variation-settings: "width" 100;
+}
+
+.saira-regular {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+  font-variation-settings: "width" 100;
+}
+
+.italianno-regular {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

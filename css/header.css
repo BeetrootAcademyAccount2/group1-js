@@ -1,0 +1,33 @@
+header {
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: right;
+  font-size: 2rem;
+  background-color: black;
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 120px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #f599a8;
+}
+
+.paw {
+  transform: translateX(-170vh);
+}
+
+.order-now {
+  background-color: #ffc0cb;
+  padding: 12px 12px 12px 18px;
+  border-radius: 20px;
+}
