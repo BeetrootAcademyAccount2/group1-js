@@ -1,3 +1,5 @@
+@use "colors" as *;
+
 header {
   position: sticky;
   top: 0;
@@ -8,7 +10,7 @@ header {
   padding-bottom: 5px;
   text-align: right;
   font-size: 2rem;
-  background-color: black;
+  background-color: $bgColor;
 
   li {
     display: inline-block;
@@ -16,10 +18,10 @@ header {
   }
 
   a {
-    color: white;
+    color: $textColor;
     text-decoration: none;
     &:hover {
-      color: #f599a8;
+      color: $hoverOver;
     }
   }
 }
@@ -29,7 +31,7 @@ header {
 }
 
 .order-now {
-  background-color: #ffc0cb;
+  background-color: $primaryColor;
   padding: 12px 12px 12px 18px;
   border-radius: 20px;
 }
