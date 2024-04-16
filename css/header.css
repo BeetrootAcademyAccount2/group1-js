@@ -23,7 +23,7 @@ header {
 }
 
 .paw {
-  transform: translateX(-170vh);
+  padding-right: 70vh;
 }
 
 .order-now {
