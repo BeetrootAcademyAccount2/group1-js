@@ -4,16 +4,19 @@ header {
 }
 
 .navbar {
+  margin: 0px auto;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: right;
   font-size: 2rem;
   background-color: black;
 }
+
 .navbar li {
   display: inline-block;
-  margin-right: 120px;
+  margin-right: 20px;
 }
+
 .navbar a {
   color: white;
   text-decoration: none;
@@ -23,7 +26,8 @@ header {
 }
 
 .paw {
-  padding-right: 70vh;
+  margin-right: auto;
+  padding-right: 20px;
 }
 
 .order-now {
