@@ -1,5 +1,15 @@
 @use "colors" as *;
 
+.edit-btn-img {
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  background-color: #3b71ca;
+  border-radius: 5px;
+  transform: translateY(-70px) translateX(30px);
+  z-index: 0;
+}
+
 .flex-container {
   background-color: #d9d9d9;
   margin-left: 15%;
@@ -59,7 +69,7 @@
     display: inline-block;
     height: 380px;
   }
-  
+
   .community-h1 {
     width: 500px;
     height: 58px;
