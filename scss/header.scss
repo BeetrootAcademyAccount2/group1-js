@@ -6,20 +6,33 @@ header {
 }
 
 .navbar {
-  margin: 0px auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: right;
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: $bgColor;
+  color: $textColor;
+  font-size: 1.5rem;
 }
 
-.navbar li {
-  display: inline-block;
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
   margin-right: 20px;
+  color: $textColor;
+  text-decoration: none;
 }
 
 .navbar a {
+  margin-right: 20px;
   color: $textColor;
   text-decoration: none;
   &:hover {
@@ -27,8 +40,10 @@ header {
   }
 }
 
-.paw {
-  transform: translateX(-50vw);
+.admin-panel {
+  font-weight: bold;
+  color: red;
+  margin-right: 20px;
 }
 
 .order-now {
