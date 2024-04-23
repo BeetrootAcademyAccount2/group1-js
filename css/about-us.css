@@ -19,6 +19,11 @@
 
 .edit-buttons {
   font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: -50px;
+  margin-right: 25%;
 }
 
 .flex-container {
