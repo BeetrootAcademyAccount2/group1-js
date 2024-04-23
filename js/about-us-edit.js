@@ -3,8 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const saveBtn = document.querySelector("#saveBtn");
   const cancelBtn = document.querySelector("#cancelBtn");
 
+  let originalContent = {}; 
+
   editBtn.addEventListener("click", function () {
+  
     document.querySelectorAll(".editable").forEach(function (el) {
+      originalContent[el.id] = {
+        content: el.innerHTML, 
+        style: window.getComputedStyle(el).cssText, 
+      };
       el.contentEditable = true;
       el.classList.add("editing");
     });
@@ -14,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   saveBtn.addEventListener("click", function () {
+   
     document.querySelectorAll(".editing").forEach(function (el) {
       el.contentEditable = false;
       el.classList.remove("editing");
@@ -24,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   cancelBtn.addEventListener("click", function () {
+    
     document.querySelectorAll(".editing").forEach(function (el) {
+      el.innerHTML = originalContent[el.id].content; 
+      el.style.cssText = originalContent[el.id].style; 
       el.contentEditable = false;
       el.classList.remove("editing");
     });
