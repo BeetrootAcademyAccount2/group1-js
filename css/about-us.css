@@ -1,3 +1,12 @@
+.edit-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
 .edit-btn-img {
   padding: 5px;
   width: 32px;

@@ -68,10 +68,14 @@
     </header>
     <main>
         <div class="flex-container">
-            <img src="../img/pen-to-square-solid-white.png" alt="edit-btn-img" class="edit-btn-img">
+            <!-- Edit button -->
+            <button id="editBtn" class="edit-btn"><img src="../img/pen-to-square-solid-white.png" alt="edit-btn-img"
+                    class="edit-btn-img"></button>
+
+            <!-- Founder Section -->
             <section class="founder-section-flex">
                 <img src="../svg/original.svg" alt="pink-bear" class="pink-bear-img" />
-                <div class="founder-text-box">
+                <div class="founder-text-box editable">
                     <h1 class="founder-h1">About our founder</h1>
                     <p class="saira-regular">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -80,8 +84,9 @@
                 </div>
             </section>
 
+            <!-- Community Section -->
             <section class="community-section-flex">
-                <div class="community-text-box">
+                <div class="community-text-box editable">
                     <h1 class="community-h1">About our community</h1>
                     <p class="community-p saira-regular">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -91,7 +96,14 @@
                 <img src="../img/community.jpg" alt="people-eating" class="community-img" />
             </section>
         </div>
+
+        <!-- Save and Cancel buttons -->
+        <div class="edit-buttons">
+            <button id="saveBtn" style="display: none;">Save</button>
+            <button id="cancelBtn" style="display: none;">Cancel</button>
+        </div>
     </main>
+
     <footer class="footer-container saira-regular">
         <div class="footer-flex-container">
             <span> &#169; All Rights Reserved 2024</span>
