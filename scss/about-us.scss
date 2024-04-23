@@ -23,9 +23,28 @@
   font-size: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: right;
-  margin-top: -50px;
+  justify-content: flex-end;
+  margin-top: -100px;
   margin-right: 25%;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.cancel-btn {
+  color: $textColor;
+  border: none;
+  background-color: #d9d9d9;
+  margin-right: 250px;
+}
+
+.save-btn {
+  color: $textColor;
+  background-color: $btnBlue;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  position: absolute;
 }
 
 .flex-container {
