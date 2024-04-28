@@ -86,13 +86,10 @@
   </head>
   <body>
     <main id="loginForm">
-      <h1 class="sigmar-one-bold">Login</h1>
-      <form
-        class="form-container"
-        action=""
-        method="GET"
-        enctype="multipart/form-data"
-      >
+      <header id="header">
+        <h1 class="loginHeader saira-bold">Login</h1>
+      </header>
+      <form class="form" onsubmit="return validation()" name="f1">
         <label class="lable-container" for="username"></label>
         <input
           class="input-container saira-regular"
@@ -101,6 +98,7 @@
           id="username"
           placeholder="Username"
         />
+        <span id="userNameError"></span>
         <label class="lable-container" for="password"></label>
         <input
           class="input-container saira-regular"
@@ -109,12 +107,16 @@
           id="password"
           placeholder="Password"
         />
+        <span id="passwordError"></span>
         <button type="submit" class="btnSignIn saira-regular">Sign In</button>
       </form>
 
-      <p class="saira-regular">
-        Don't have an account? <a href="../pages/register.html">Register Now</a>
-      </p>
+      <footer id="footer">
+        <p class="saira-regular">
+          Don't have an account?
+          <a href="../pages/register.html">Register Now</a>
+        </p>
+      </footer>
     </main>
   </body>
 </html>
