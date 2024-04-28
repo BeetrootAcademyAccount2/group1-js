@@ -1,11 +1,13 @@
+// Validation of user name and password
+
 function validation() {
   let userName = document.f1.username.value;
-  let password = document.f1.password.value;
+  let passwordIn = document.f1.password.value;
   let userNameError = document.f1.querySelector("#userNameError");
   let passwordError = document.f1.querySelector("#passwordError");
 
   const userNamePattern = /^[0-9A-Za-z]{4,24}$/;
-  const passwordPattern = /^(?=.*?[0-9])(?=.*?[A-Za-z]).{8,32}$/;
+  const passwordPattern = /^(?=.*?[0-9])(?=.*?[A-Za-z]).{6,32}$/;
 
   if (userName == "") {
     userNameError.innerHTML = "user name is ruquired";
@@ -21,7 +23,7 @@ function validation() {
     return false;
   }
 
-  if (password == "") {
+  if (passwordIn == "") {
     passwordError.innerHTML = "password is ruquired";
     passwordError.style.color = "red";
     return false;
@@ -29,11 +31,38 @@ function validation() {
     passwordError.innerHTML = "";
   }
 
-  if (!passwordPattern.test(password)) {
+  if (!passwordPattern.test(passwordIn)) {
     passwordError.innerHTML = "password doesn't match";
     passwordError.style.color = "red";
     return false;
   }
-
-  return true;
 }
+
+// Eye toggle
+$(document).ready(function () {
+  const password = $("#password");
+  $("#eye").click(function () {
+    if (password.prop("type") == "password") {
+      $(this).addClass("fa-eye-slash");
+      $(this).removeClass("fa-eye");
+      password.attr("type", "text");
+    } else {
+      $(this).removeClass("fa-eye-slash");
+      $(this).addClass("fa-eye");
+      password.attr("type", "password");
+    }
+  });
+});
+
+//redirecting to menu page
+const btnTarget = document.getElementById("btn-submit");
+
+btnTarget.addEventListener("click", () => {
+  const userName = "admin"; // Sample value for demonstration
+  const passwordIn = "group1"; // Sample value for demonstration
+  if (userName === "admin" && passwordIn === "group1") {
+    window.location.href = "./menu.html";
+  } else {
+    alert("Invalid username or password");
+  }
+});

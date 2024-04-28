@@ -46,6 +46,21 @@ body {
       margin-bottom: 10px;
     }
 
+    .containerPass {
+      @include flex-container(row, center, center);
+      position: relative;
+      #password {
+        outline: none;
+      }
+      #eye {
+        position: absolute;
+        top: 40%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+
     .btnSignIn {
       width: 375px;
       height: 49px;
@@ -60,9 +75,10 @@ body {
 
     #passwordError,
     #userNameError {
-        align-self: flex-start;
-        margin-bottom: 8px;
-        margin-left: 8px;
+      align-self: flex-start;
+      margin-bottom: 8px;
+      margin-left: 8px;
+      font-family: "Saira", sans-serif;
     }
   }
 
