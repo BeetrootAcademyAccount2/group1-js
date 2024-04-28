@@ -1,3 +1,6 @@
+// defould open login page
+window.location.href = "login.html";
+
 // Validation of user name and password
 
 function validation() {
@@ -55,14 +58,17 @@ $(document).ready(function () {
 });
 
 //redirecting to menu page
-const btnTarget = document.getElementById("btn-submit");
 
-btnTarget.addEventListener("click", () => {
-  const userName = "admin"; // Sample value for demonstration
-  const passwordIn = "group1"; // Sample value for demonstration
-  if (userName === "admin" && passwordIn === "group1") {
-    window.location.href = "./menu.html";
-  } else {
-    alert("Invalid username or password");
+function redirect() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if (user === "admin" && pass === "group1") {
+    alert("successfull!");
+    setTimeout(function () {
+      window.location.href = "menu.html";
+    }, 0);
   }
-});
+}
+// default open login page
+// window.location.href = "login.html";

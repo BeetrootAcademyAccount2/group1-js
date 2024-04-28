@@ -107,6 +107,7 @@
           name="username"
           id="username"
           placeholder="Username"
+          autocomplete="username"
         />
         <span id="userNameError"></span>
         <label class="lable-container" for="password"></label>
@@ -117,11 +118,17 @@
             name="password"
             id="password"
             placeholder="Password"
+            autocomplete="current-password"
           />
           <i id="eye" class="fa-solid fa-eye"></i>
         </div>
         <span id="passwordError"></span>
-        <button id="btn-submit" type="submit" class="btnSignIn saira-regular">
+        <button
+          id="btn-submit"
+          type="submit"
+          class="btnSignIn saira-regular"
+          onclick="redirect()"
+        >
           Sign In
         </button>
       </form>
