@@ -1,3 +1,12 @@
+.edit-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
 .edit-btn-img {
   padding: 5px;
   width: 32px;
@@ -6,6 +15,34 @@
   border-radius: 5px;
   transform: translateY(-70px) translateX(30px);
   z-index: 0;
+}
+
+.edit-buttons {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: -100px;
+  margin-right: 25%;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.cancel-btn {
+  color: white;
+  border: none;
+  background-color: #d9d9d9;
+  margin-right: 250px;
+}
+
+.save-btn {
+  color: white;
+  background-color: #3b71ca;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  position: absolute;
 }
 
 .flex-container {
@@ -33,8 +70,8 @@
   display: inline-block;
 }
 .flex-container .founder-h1 {
-  width: 354px;
-  height: 43px;
+  width: 500px;
+  height: 58px;
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
