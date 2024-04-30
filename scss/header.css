@@ -1,0 +1,52 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #f599a8;
+}
+
+.admin-panel {
+  font-weight: bold;
+  color: red;
+  margin-right: 20px;
+}
+
+.order-now {
+  background-color: #ffc0cb;
+  padding: 12px 12px 12px 18px;
+  border-radius: 20px;
+}/*# sourceMappingURL=header.css.map */
