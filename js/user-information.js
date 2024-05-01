@@ -62,35 +62,34 @@ editBtn.addEventListener("click", () => {
     span[i].replaceWith(input2[i]);
     input2[0].focus();
   }
+});
+cancelBtn.addEventListener("click", () => {
+  editBtns.classList.add("d-none");
+  editBtn.classList.remove("d-none");
+  for (let i = 0; i < span.length; i++) {
+    input2[i].classList.add("d-none");
+    input2[i].replaceWith(span[i]);
+    input2[i].value = span[i].innerHTML;
+  }
+});
 
-  cancelBtn.addEventListener("click", () => {
-    editBtns.classList.add("d-none");
-    editBtn.classList.remove("d-none");
-    for (let i = 0; i < span.length; i++) {
-      input2[i].classList.add("d-none");
-      input2[i].replaceWith(span[i]);
-      input2[i].value = span[i].innerHTML;
-    }
-  });
-
-  saveBtn.addEventListener("click", () => {
-    if (input2[0].value.length <= 3) {
-      window.alert("User name should contain more than 3 symbols");
+saveBtn.addEventListener("click", () => {
+  if (input2[0].value.length <= 3) {
+    window.alert("User name should contain more than 3 symbols");
+    return;
+  }
+  for (let i = 1; i < span.length; i++) {
+    if (input2[i].value.length <= 2) {
+      window.alert("The field should contain more than 2 symbols");
       return;
     }
-    for (let i = 1; i < span.length; i++) {
-      if (input2[i].value.length <= 2) {
-        window.alert("The field should contain more than 2 symbols");
-        return;
-      }
-    }
+  }
 
-    editBtns.classList.add("d-none");
-    editBtn.classList.remove("d-none");
-    for (let i = 0; i < span.length; i++) {
-      input2[i].classList.add("d-none");
-      span[i].innerHTML = input2[i].value;
-      input2[i].replaceWith(span[i]);
-    }
-  });
+  editBtns.classList.add("d-none");
+  editBtn.classList.remove("d-none");
+  for (let i = 0; i < span.length; i++) {
+    input2[i].classList.add("d-none");
+    span[i].innerHTML = input2[i].value;
+    input2[i].replaceWith(span[i]);
+  }
 });
