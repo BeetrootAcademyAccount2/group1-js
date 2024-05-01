@@ -34,6 +34,7 @@ const userInfo = {
         valueName.innerHTML = value;
         liItem.append(valueName);
         var inputValue = document.createElement("input");
+
         Object.assign(inputValue, {
           type: "text",
           value: valueName.textContent,
@@ -73,9 +74,19 @@ editBtn.addEventListener("click", () => {
   });
 
   saveBtn.addEventListener("click", () => {
+    if (input2[0].value.length <= 3) {
+      window.alert("User name should contain more than 3 symbols");
+      return;
+    } else {
+      for (let i = 1; i < span.length; i++) {
+        if (input2[i].value.length <= 2) {
+          window.alert("The field should contain more than 2 symbols");
+          return;
+        }
+      }
+    }
     editBtns.classList.add("d-none");
     editBtn.classList.remove("d-none");
-
     for (let i = 0; i < span.length; i++) {
       input2[i].classList.add("d-none");
       span[i].innerHTML = input2[i].value;
