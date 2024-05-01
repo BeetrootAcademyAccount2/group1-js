@@ -56,16 +56,30 @@
   position: relative;
   font-size: 18px;
 }
+.fa-solid:last-child {
+  margin-right: 0;
+}
 
-.fa-solid::after {
-  content: "";
-  position: absolute;
-  border: 1px solid red;
+.info-button,
+.edit-button,
+.delete-button {
+  text-align: center;
+  padding-top: 5px;
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
+}
+
+.info-button {
+  background-color: #54b4d3;
+}
+
+.edit-button {
+  background-color: #3b71ca;
+}
+
+.delete-button {
+  background-color: #dc4c64;
 }
 
 .item-container {
@@ -90,7 +104,9 @@
   left: 0;
 }
 
-.modal {
+.modal,
+.info-modal,
+.edit-modal {
   width: 60%;
   height: 73%;
   position: absolute;
@@ -101,7 +117,9 @@
   border-radius: 16px;
   display: none;
 }
-.modal__title {
+.modal__title,
+.info-modal__title,
+.edit-modal__title {
   height: 80px;
   display: flex;
   align-items: center;
@@ -110,6 +128,22 @@
   padding-left: 40px;
   font-size: 24px;
   color: #ffffff;
+}
+
+.info-modal__edit {
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border-radius: 8px;
+}
+.info-modal__items {
+  list-style: none;
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
 }
 
 .form {
@@ -174,4 +208,22 @@
   font-weight: 700;
   font-size: 24px;
   color: #fff;
+}
+
+.modal-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 16px;
+  border: none;
+  background-color: #54b4d3;
+  padding: 10px 50px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.delete-modal--cancel,
+.modal__button--cancel {
+  right: 215px;
 }/*# sourceMappingURL=menu.css.map */

@@ -51,8 +51,6 @@ function appendItem(accordion, item) {
   itemContainer.appendChild(editButton);
   itemContainer.appendChild(deleteButton);
 
-  editButton;
-
   deleteButton.addEventListener("click", () => {
     deleteModal.style.display = "block";
     deleteModalCancelBtn.addEventListener("click", () => {
@@ -74,6 +72,41 @@ function appendItem(accordion, item) {
 
   newItem.textContent = item.formItemName;
   accordion.querySelector(".item-list").appendChild(itemContainer);
+
+
+  infoButton.addEventListener("click", () => {
+  const infoModal = document.querySelector(".info-modal");
+  const title = infoModal.querySelector(".info-modal__title");
+  const itemsList = infoModal.querySelector(".info-modal__items");
+  const infoModalBtn = infoModal.querySelector(".info-modal__button--close");
+
+  infoModalBtn.addEventListener("click", () => {
+    infoModal.style.display = "none";
+  });
+
+  title.textContent = item.formItemName;
+  itemsList.innerHTML = "";
+
+  for (const key in item) {
+    if (item.hasOwnProperty(key)) {
+      const listItem = document.createElement("li");
+      const propertyName = key.replace("formItem", ""); 
+      const capitalizedPropertyName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1);
+      const propertyValue = item[key];
+      listItem.textContent = `${capitalizedPropertyName}: ${propertyValue}`;
+      itemsList.appendChild(listItem);
+    }
+  }
+
+  infoModal.style.display = "block";
+});
+
+// editButton.addEventListener('click', () => {
+//     const editModal = document.querySelector('.edit-modal');
+//     editModal.style.display = 'block';
+
+// })
+  
 }
 
 if (!localStorage.getItem("accordion_productList")) {
