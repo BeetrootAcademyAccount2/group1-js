@@ -71,6 +71,11 @@ body {
       font-weight: 500;
       border: none;
       background-color: $primaryColor;
+      cursor: pointer;
+      &:hover {
+        background-color: #3b71ca;
+        color: $textColor;
+      }
     }
 
     #passwordError,

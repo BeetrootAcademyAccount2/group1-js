@@ -68,6 +68,11 @@ body {
   font-weight: 500;
   border: none;
   background-color: #ffc0cb;
+  cursor: pointer;
+}
+#loginForm .form .btnSignIn:hover {
+  background-color: #3b71ca;
+  color: white;
 }
 #loginForm .form #passwordError,
 #loginForm .form #userNameError {
