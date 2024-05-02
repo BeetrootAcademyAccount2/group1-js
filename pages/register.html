@@ -97,9 +97,19 @@
   <body>
     <main id="loginForm">
       <header id="header">
-        <h1 class="loginHeader saira-bold">Login</h1>
+        <h1 class="loginHeader saira-bold">Register</h1>
       </header>
-      <form class="form" onsubmit="return validation()" name="f1">
+      <form class="form">
+        <label class="lable-container" for="username"></label>
+        <input
+          class="input-container saira-regular"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          autocomplete="email"
+        />
+        <span id="enailError"></span>
         <label class="lable-container" for="username"></label>
         <input
           class="input-container saira-regular"
@@ -111,18 +121,51 @@
         />
         <span id="userNameError"></span>
         <label class="lable-container" for="password"></label>
-        <div class="containerPass">
-          <input
-            class="input-container saira-regular"
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            autocomplete="current-password"
-          />
-          <i id="eye" class="fa-solid fa-eye"></i>
-        </div>
+        <input
+          class="input-container saira-regular"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          autocomplete="current-password"
+        />
         <span id="passwordError"></span>
+        <label class="lable-container" for="password"></label>
+        <input
+          class="input-container saira-regular"
+          type="password"
+          name="password"
+          id="repeatPassword"
+          placeholder="Repeat password"
+          autocomplete="current-password"
+        />
+        <span id="repearPasswordError"></span>
+        <label class="lable-container" for="firstName"></label>
+        <input
+          class="input-container saira-regular"
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="Firs tName"
+          autocomplete="name"
+        />
+        <label class="lable-container" for="secondName"></label>
+        <input
+          class="input-container saira-regular"
+          type="text"
+          name="secondName"
+          id="secondName"
+          placeholder="Second Name"
+          autocomplete="family-name"
+        />
+        <label class="lable-container" for="role"></label>
+        <input
+          class="input-container saira-regular"
+          type="text"
+          name="role"
+          id="role"
+          placeholder="Role"
+        />
         <button
           id="btn-submit"
           type="submit"
@@ -135,8 +178,8 @@
 
       <footer id="footer">
         <p class="saira-regular">
-          Don't have an account?
-          <a href="../pages/register.html">Register Now</a>
+          Already have an account?
+          <a href="../pages/login.html">Login Now</a>
         </p>
       </footer>
     </main>

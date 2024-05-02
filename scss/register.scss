@@ -1,3 +1,84 @@
 @use "colors" as *;
 @use "colors" as *;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// flexbox setup
+$flex-direction: column;
+$justfy-content: center;
+$align-items: center;
+
+@mixin flex-container($flex-direction, $justfy-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justfy-content;
+  align-items: $align-items;
+}
+
+body {
+  @include flex-container(row, center, center);
+  background-color: $bgColor;
+  height: 100vh;
+}
+
+#loginForm {
+  @include flex-container(column, center, center);
+  background-color: $textColor;
+  width: 480px;
+  height: 812px;
+  border-radius: 30px;
+  .loginHeader {
+    font-size: 40px;
+    margin-bottom: 56px;
+  }
+  .form {
+    @include flex-container(column, center, center);
+
+    .input-container {
+      width: 376px;
+      height: 48px;
+      border: 1px solid #5d5d5d;
+      border-radius: 8px;
+      padding: 16px 30px 10px 24px;
+      margin-bottom: 10px;
+    }
+
+    .btnSignIn {
+      width: 375px;
+      height: 49px;
+      border-radius: 4px;
+      margin-top: 32px;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      background-color: $primaryColor;
+    }
+
+    #passwordError,
+    #userNameError {
+      align-self: flex-start;
+      margin-bottom: 8px;
+      margin-left: 8px;
+      font-family: "Saira", sans-serif;
+    }
+  }
+
+  #footer {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 32px 0px;
+    a {
+      text-decoration: none;
+      color: $bgColor;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
