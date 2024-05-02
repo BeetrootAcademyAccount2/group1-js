@@ -1,5 +1,5 @@
 // defould open login page
-window.location.href = "login.html";
+// window.location.href = "login.html";
 
 // Validation of user name and password
 
@@ -64,11 +64,12 @@ function redirect() {
   let pass = document.getElementById("password").value;
 
   if (user === "admin" && pass === "group1") {
-    alert("successfull!");
+    // alert("Login is successfull!");
     setTimeout(function () {
       window.location.href = "menu.html";
     }, 0);
   }
 }
-// default open login page
+
+// defould open login page
 // window.location.href = "login.html";
