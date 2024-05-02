@@ -33,7 +33,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-#loginForm .form .input-container {
+#loginForm .form .input-container,
+#loginForm .form #role {
   width: 376px;
   height: 48px;
   border: 1px solid #5d5d5d;
@@ -64,6 +65,10 @@ body {
   margin-left: 8px;
   font-family: "Saira", sans-serif;
 }
+#loginForm .form .roleOption {
+  color: #797979;
+  background-color: white;
+}
 #loginForm #footer {
   font-size: 12px;
   line-height: 14px;
@@ -76,4 +81,10 @@ body {
 }
 #loginForm #footer a:hover {
   text-decoration: underline;
+}
+
+span {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }/*# sourceMappingURL=register.css.map */

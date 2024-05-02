@@ -38,7 +38,8 @@ body {
   .form {
     @include flex-container(column, center, center);
 
-    .input-container {
+    .input-container,
+    #role {
       width: 376px;
       height: 48px;
       border: 1px solid #5d5d5d;
@@ -71,6 +72,11 @@ body {
       margin-left: 8px;
       font-family: "Saira", sans-serif;
     }
+
+    .roleOption {
+      color: #797979;
+      background-color: $textColor;
+    }
   }
 
   #footer {
@@ -86,4 +92,10 @@ body {
       }
     }
   }
+}
+
+span {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }

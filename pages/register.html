@@ -99,7 +99,7 @@
       <header id="header">
         <h1 class="loginHeader saira-bold">Register</h1>
       </header>
-      <form class="form">
+      <form id="formReg" class="form" onsubmit="return event()">
         <label class="lable-container" for="username"></label>
         <input
           class="input-container saira-regular"
@@ -109,7 +109,7 @@
           placeholder="Email"
           autocomplete="email"
         />
-        <span id="enailError"></span>
+        <span id="emailError" class="error-message"></span>
         <label class="lable-container" for="username"></label>
         <input
           class="input-container saira-regular"
@@ -119,7 +119,7 @@
           placeholder="Username"
           autocomplete="username"
         />
-        <span id="userNameError"></span>
+        <span id="userNameError" class="error-message"></span>
         <label class="lable-container" for="password"></label>
         <input
           class="input-container saira-regular"
@@ -129,7 +129,7 @@
           placeholder="Password"
           autocomplete="current-password"
         />
-        <span id="passwordError"></span>
+        <span id="passwordError" class="error-message"></span>
         <label class="lable-container" for="password"></label>
         <input
           class="input-container saira-regular"
@@ -139,16 +139,17 @@
           placeholder="Repeat password"
           autocomplete="current-password"
         />
-        <span id="repearPasswordError"></span>
+        <span id="repeatPasswordError" class="error-message"></span>
         <label class="lable-container" for="firstName"></label>
         <input
           class="input-container saira-regular"
           type="text"
           name="firstName"
           id="firstName"
-          placeholder="Firs tName"
+          placeholder="Firs Name"
           autocomplete="name"
         />
+        <span id="nameError" class="error-message"></span>
         <label class="lable-container" for="secondName"></label>
         <input
           class="input-container saira-regular"
@@ -158,20 +159,14 @@
           placeholder="Second Name"
           autocomplete="family-name"
         />
+        <span id="secondNameError" class="error-message"></span>
         <label class="lable-container" for="role"></label>
-        <input
-          class="input-container saira-regular"
-          type="text"
-          name="role"
-          id="role"
-          placeholder="Role"
-        />
-        <button
-          id="btn-submit"
-          type="submit"
-          class="btnSignIn saira-regular"
-          onclick="redirect()"
-        >
+        <select name="role" id="role" class="saira-regular roleOption">
+          <option value="" class="option">Role</option>
+          <option value="Admin" class="option">Admin</option>
+        </select>
+        <span id="roleError" class="error-message"></span>
+        <button id="btn-submit" type="submit" class="btnSignIn saira-regular">
           Sign In
         </button>
       </form>
