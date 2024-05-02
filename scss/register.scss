@@ -56,7 +56,12 @@ body {
       font-size: 16px;
       font-weight: 500;
       border: none;
-      background-color: $primaryColor;
+      background-color: #3b71ca;
+      color: $textColor;
+      cursor: pointer;
+      &:hover {
+        background-color: $primaryColor;
+      }
     }
 
     #passwordError,
