@@ -1,0 +1,57 @@
+@use "colors" as *;
+
+.d-none {
+  display: none;
+}
+
+.saira-bold {
+  color: $textColor;
+}
+
+.user-info {
+  position: relative;
+  height: 65vh;
+  width: 85%;
+  margin: 4% auto;
+  padding: 1rem 1rem 20%;
+  background-color: $userInfoBg;
+  border: 1px solid $bgColor;
+  border-radius: 16px;
+  h2 {
+    margin-top: 0;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: 3.5rem;
+  }
+  .list {
+    list-style: none;
+    font-size: 2rem;
+    line-height: 2.5;
+    padding-left: 3rem;
+    .input2 {
+      padding-left: 1.5rem;
+    }
+  }
+  .edit-btn {
+    position: absolute;
+    right: 70px;
+    top: 100px;
+  }
+}
+
+.edit-buttons {
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  align-items: center;
+  margin-right: 10%;
+
+  .cancel-btn {
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .save-btn {
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=user-information.css.map */
