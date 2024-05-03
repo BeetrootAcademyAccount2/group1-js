@@ -1,83 +1,110 @@
-// document.getElementById("formReg").addEventListener("submit", function (event) {
-// // Prevent form submission
-//   event.preventDefault();
-//   const form = document.getElementById("formReg");
-//   const email = document.getElementById("email").value.trim();
-//   const username = document.getElementById("username").value.trim();
-//   const password = document.getElementById("password").value;
-//   const repeatPassword = document.getElementById("repeatPassword").value;
-//   const firstName = document.getElementById("firstName").value.trim();
-//   const secondName = document.getElementById("secondName").value.trim();
-//   const role = document.getElementById("role").value;
+function registrValidation() {
+  let isValid = true;
 
-//   const emailError = document.getElementById("emailError");
-//   const userNameError = document.getElementById("userNameError");
-//   const passwordError = document.getElementById("passwordError");
-//   const repeatPasswordError = document.getElementById("repearPasswordError");
-//   const firstNameError = document.getElementById("firstNameError");
-//   const secondNameError = document.getElementById("secondNameError");
-//   const roleError = document.getElementById("roleError");
+  // Reset error messages
+  $(".error-message").html("");
 
-//   emailError.textContent = "";
-//   userNameError.textContent = "";
-//   passwordError.textContent = "";
-//   repeatPasswordError.textContent = "";
-//   firstNameError.textContent = "";
-//   secondNameError.textContent = "";
-//   roleError.textContent = "";
+  // validate email
+  const email = $("#email").val().trim();
+  if (email === "") {
+    $("#emailError").html("Email is required").css("color", "red");
+    isValid = false;
+  } else if (!isValidEmail(email)) {
+    $("#emailError")
+      .html("Please enter a valid email address")
+      .css("color", "red");
+    isValid = false;
+  }
 
-//   let isValid = true;
+  // validate username
+  const username = $("#username").val().trim();
+  if (username === "") {
+    $("#userNameError").html("Username is required").css("color", "red");
+    isValid = false;
+  }
 
-//   if (email === "" || !email.includes("@")) {
-//     emailError.textContent = "Please enter a valid email address.";
-//     isValid = false;
-//   }
+  // validate password
+  const password = $("#password").val().trim();
+  if (password === "") {
+    $("#passwordError").html("Password is required").css("color", "red");
+    isValid = false;
+  } else if (!isValidPassword(password)) {
+    $("#passwordError")
+      .html("Please enter a valid password")
+      .css("color", "red");
+    isValid = false;
+  }
 
-//   if (username === "") {
-//     userNameError.textContent = "Please enter your password.";
-//     isValid = false;
-//   } else if (!username.match(/^[0-9A-Za-z]{3,24}$/)) {
-//     addressError.textContent =
-//       "Please enter a valid username (4-24 characters, alphanumeric only).";
-//     isValid = false;
-//   }
+  // validate repeated password
+  const repeatPassword = $("#repeatPassword").val().trim();
+  if (repeatPassword === "") {
+    $("#repeatPasswordError")
+      .html("Pleace repeat your password")
+      .css("color", "red");
+    isValid = false;
+  } else if (repeatPassword !== password) {
+    $("#repeatPasswordError")
+      .html("Passwords do not match")
+      .css("color", "red");
+    isValid = false;
+  }
 
-//   if (password === "") {
-//     passwordError.textContent = "Please enter your password.";
-//     isValid = false;
-//   } else if (!password.match(/^(?=.*?[0-9])(?=.*?[A-Za-z]).{6,32}$/)) {
-//     passwordError.textContent =
-//       "Please enter a valid password (6-32 characters, at least one letter and one digit).";
-//     isValid = false;
-//   }
+  // validate first name
+  const firstName = $("#firstName").val().trim();
+  if (firstName.length < 2) {
+    $("#nameError")
+      .html("First name must be at least 2 characters long")
+      .css("color", "red");
+    isValid = false;
+  }
+  // validate second name
+  const secondName = $("#secondName").val().trim();
+  if (secondName.length < 2) {
+    $("#secondNameError")
+      .html("Second name must be at least 2 characters long")
+      .css("color", "red");
+    isValid = false;
+  }
 
-//   if (repeatPassword === "") {
-//     repeatPasswordError.textContent = "Please repeat your password.";
-//     isValid = false;
-//   } else if (repeatPassword !== password) {
-//     repeatPasswordError.textContent = "Passwords do not match.";
-//     isValid = false;
-//   }
+  //   validate a role selection
+  const role = $("#role").val().trim();
+  if (role === "") {
+    $("#roleError").html("Please select a role").css("color", "red");
+    isValid = false;
+  } else if (role !== "Admin") {
+    $("#roleError").html("Only 'Admin' role is allowed").css("color", "red");
+    isValid = false;
+  }
 
-//   if (firstName.length < 2) {
-//     firstNameError.textContent =
-//       "First name must be at least 2 characters long.";
-//     isValid = false;
-//   }
+  return isValid;
+}
 
-//   if (secondName.length < 2) {
-//     secondNameError.textContent =
-//       "Last name must be at least 2 characters long.";
-//     isValid = false;
-//   }
+// valedate patterns
+function isValidEmail(email) {
+  // email validation regex
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
 
-//   if (role === "") {
-//     roleError.textContent = "Please select your role.";
-//     isValid = false;
-//   }
+function isValidPassword(password) {
+  const passwordPattern = /^(?=.*?[0-9])(?=.*?[A-Za-z]).{6,32}$/;
+  return passwordPattern.test(password);
+}
 
-//   if (isValid) {
-//     alert("Registration successful!");
-//   }
-// });
+// redirect to login page
 
+$(document).ready(function () {
+  // Attach click event handler to the "Sign In" button
+  $("#btn-submit").click(function () {
+    redirectToLogin();
+  });
+});
+
+function redirectToLogin() {
+  if (registrValidation()) {
+    // Redirect to the login page
+    setTimeout(function () {
+      window.location.href = "menu.html";
+    }, 0);
+  }
+}

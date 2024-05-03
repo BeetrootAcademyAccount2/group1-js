@@ -29,7 +29,7 @@ body {
   @include flex-container(column, center, center);
   background-color: $textColor;
   width: 480px;
-  height: 812px;
+  height: 854px;
   border-radius: 30px;
   .loginHeader {
     font-size: 40px;
@@ -65,12 +65,10 @@ body {
       }
     }
 
-    #passwordError,
-    #userNameError {
-      align-self: flex-start;
-      margin-bottom: 8px;
-      margin-left: 8px;
-      font-family: "Saira", sans-serif;
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
     .roleOption {
@@ -92,10 +90,4 @@ body {
       }
     }
   }
-}
-
-span {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
 }

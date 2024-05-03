@@ -20,7 +20,7 @@ body {
   align-items: center;
   background-color: white;
   width: 480px;
-  height: 812px;
+  height: 854px;
   border-radius: 30px;
 }
 #loginForm .loginHeader {
@@ -58,12 +58,10 @@ body {
 #loginForm .form .btnSignIn:hover {
   background-color: #ffc0cb;
 }
-#loginForm .form #passwordError,
-#loginForm .form #userNameError {
-  align-self: flex-start;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  font-family: "Saira", sans-serif;
+#loginForm .form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 #loginForm .form .roleOption {
   color: #797979;
@@ -81,10 +79,4 @@ body {
 }
 #loginForm #footer a:hover {
   text-decoration: underline;
-}
-
-span {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
 }/*# sourceMappingURL=register.css.map */
