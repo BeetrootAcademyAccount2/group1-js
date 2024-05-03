@@ -1,1 +1,82 @@
-/*# sourceMappingURL=register.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 480px;
+  height: 854px;
+  border-radius: 30px;
+}
+#loginForm .loginHeader {
+  font-size: 40px;
+  margin-bottom: 56px;
+}
+#loginForm .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loginForm .form .input-container,
+#loginForm .form #role {
+  width: 376px;
+  height: 48px;
+  border: 1px solid #5d5d5d;
+  border-radius: 8px;
+  padding: 16px 30px 10px 24px;
+  margin-bottom: 10px;
+}
+#loginForm .form .btnSignIn {
+  width: 375px;
+  height: 49px;
+  border-radius: 4px;
+  margin-top: 32px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background-color: #3b71ca;
+  color: white;
+  cursor: pointer;
+}
+#loginForm .form .btnSignIn:hover {
+  background-color: #ffc0cb;
+}
+#loginForm .form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#loginForm .form .roleOption {
+  color: #797979;
+  background-color: white;
+}
+#loginForm #footer {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 32px 0px;
+}
+#loginForm #footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+#loginForm #footer a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=register.css.map */
