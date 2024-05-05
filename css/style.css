@@ -1,3 +1,7 @@
+body {
+  display: none;
+}
+
 .rectangle-black-header {
   height: 742px;
   width: 100%;

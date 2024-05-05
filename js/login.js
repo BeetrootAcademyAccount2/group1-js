@@ -61,7 +61,7 @@ function redirect() {
   let pass = document.getElementById("password").value;
 
   if (user === "admin" && pass === "group1") {
-    // alert("Login is successfull!");
+    // alert("Login is successful!");
     setTimeout(function () {
       window.location.href = "menu.html";
     }, 0);
