@@ -1,0 +1,246 @@
+.main {
+  padding: 100px 0 150px;
+}
+
+.accordion {
+  width: 60%;
+  margin: 0 auto;
+  --bs-accordion-bg: #000000;
+  --bs-accordion-btn-color: #ffffff;
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-active-bg: #000000;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(48 38 38 / 25%);
+}
+
+.accordion-body {
+  background-color: #808080;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+.accordion-button {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+
+.input {
+  visibility: hidden;
+}
+
+.info-button,
+.edit-button,
+.delete-button {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.add-button {
+  display: none;
+}
+
+.button-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.fa-solid {
+  margin-right: 30px;
+  position: relative;
+  font-size: 18px;
+}
+.fa-solid:last-child {
+  margin-right: 0;
+}
+
+.info-button,
+.edit-button,
+.delete-button {
+  text-align: center;
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.info-button {
+  background-color: #54b4d3;
+}
+
+.edit-button {
+  background-color: #3b71ca;
+}
+
+.delete-button {
+  background-color: #dc4c64;
+}
+
+.item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.item-container li {
+  list-style: none;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.modal,
+.info-modal,
+.edit-modal {
+  width: 60%;
+  height: 73%;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  margin: 0 auto;
+  background-color: #808080;
+  border-radius: 16px;
+  display: none;
+}
+.modal__title,
+.info-modal__title,
+.edit-modal__title {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 16px;
+  padding-left: 40px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.info-modal__edit {
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border-radius: 8px;
+}
+.info-modal__items {
+  list-style: none;
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px 100px;
+}
+.form__label {
+  margin-bottom: 46px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.form__input {
+  width: 300px;
+}
+
+.delete-modal {
+  display: none;
+  height: 300px;
+  position: absolute;
+  z-index: 3;
+  padding: 24px 30px 60px 40px;
+  width: 930px;
+  border: 4px solid #000;
+  border-radius: 16px;
+  top: 25%;
+  left: calc(50% - 465px);
+  background-color: #ffffff;
+}
+
+.admin-modal {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  padding: 24px 30px 60px 40px;
+  width: 930px;
+  border: 4px solid #000;
+  border-radius: 16px;
+  top: 25%;
+  left: calc(50% - 465px);
+  background-color: #ffffff;
+}
+.admin-modal__title {
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 50px;
+}
+.admin-modal__text {
+  font-weight: 400;
+  font-size: 36px;
+}
+.admin-modal__button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 16px;
+  border: none;
+  background-color: #54b4d3;
+  padding: 10px 50px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.modal-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 16px;
+  border: none;
+  background-color: #54b4d3;
+  padding: 10px 50px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.delete-modal--cancel,
+.modal__button--cancel {
+  right: 215px;
+}
