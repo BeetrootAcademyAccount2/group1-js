@@ -1,3 +1,7 @@
+body {
+  display: none;
+}
+
 .rectangle-black-header {
   height: 742px;
   width: 100%;
@@ -102,4 +106,4 @@ p {
     padding: 12px 12px 12px 18px;
     margin-left: 45%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
