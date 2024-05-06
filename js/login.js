@@ -1,6 +1,3 @@
-// defould open login page
-// window.location.href = "login.html";
-
 // Validation of user name and password
 
 function validation() {
@@ -13,7 +10,7 @@ function validation() {
   const passwordPattern = /^(?=.*?[0-9])(?=.*?[A-Za-z]).{6,32}$/;
 
   if (userName == "") {
-    userNameError.innerHTML = "user name is ruquired";
+    userNameError.innerHTML = "user name is required";
     userNameError.style.color = "red";
     return false;
   } else {
@@ -27,7 +24,7 @@ function validation() {
   }
 
   if (passwordIn == "") {
-    passwordError.innerHTML = "password is ruquired";
+    passwordError.innerHTML = "password is required";
     passwordError.style.color = "red";
     return false;
   } else {
@@ -64,12 +61,12 @@ function redirect() {
   let pass = document.getElementById("password").value;
 
   if (user === "admin" && pass === "group1") {
-    // alert("Login is successfull!");
+    // alert("Login is successful!");
     setTimeout(function () {
       window.location.href = "menu.html";
     }, 0);
   }
 }
 
-// defould open login page
+// default open login page
 // window.location.href = "login.html";
